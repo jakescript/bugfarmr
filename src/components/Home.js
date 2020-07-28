@@ -30,17 +30,15 @@ class Home extends Component {
     render() {
         const Buglist = this.state.bugs.map((bug, i) => (
             <div key={i}>
-                <Bug item={bug} update={this.updateBugs}/>
+                <Bug item={bug} update={this.updateBugs} />
             </div>
         ))
 
         return (
-            <div style={{ display: "flex", marginTop: "8vh" }}>
-                <Container className="my-auto">
-                    <h1>Current Bugs:</h1>
-                    {Buglist}
-                </Container>
-            </div>
+            <Container>
+                <h1 style={{ color: "black", marginTop: "5vh" }}>Current Bugs:</h1>
+                {Buglist}
+            </Container>
         );
     }
 }
