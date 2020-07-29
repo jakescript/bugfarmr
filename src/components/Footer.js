@@ -7,7 +7,7 @@ function Footer() {
         <Navbar variant="primary" bg="primary" fixed="bottom">
             <Container className="justify-content-center">
                 <Navbar.Brand>
-                    <Button variant="link">
+                    <Button href="https://github.com/jakescript/Bugfarmr" variant="link">
                         <FaGithub size={20} color="white" />
                     </Button>
                     <span style={{fontSize: "0.8rem", color: "white"}} className="align-middle">
