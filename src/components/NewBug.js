@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Form, Col, Row, Button, Alert, Badge } from "react-bootstrap"
+import { Container, Form, Col, Row, Button, Alert } from "react-bootstrap"
 import SevBadge from "./SeverityBadge"
 
 class NewBug extends Component {
