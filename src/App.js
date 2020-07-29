@@ -5,6 +5,7 @@ import Home from "./components/Home"
 import NewBug from "./components/NewBug"
 import About from "./components/About"
 import MainNav from "./components/Nav"
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/new" component={NewBug} />
           {/* <Route exact path="/about" component={About} /> */}
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   );

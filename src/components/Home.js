@@ -28,16 +28,24 @@ class Home extends Component {
 
 
     render() {
-        const Buglist = this.state.bugs.map((bug, i) => (
-            <div key={i}>
-                <Bug item={bug} update={this.updateBugs} />
-            </div>
-        ))
+        const Buglist = this.state.bugs.map((bug, i) => {
+            console.log(bug)
+            return (
+                <div key={i}>
+                    <Bug item={bug} update={this.updateBugs} />
+                </div>
+            )
+        })
 
         return (
             <Container>
                 <h1 style={{ color: "black", marginTop: "5vh" }}>Current Bugs:</h1>
                 {Buglist}
+                {this.state.bugs.length === 0 &&
+                    <div className="m-5">
+                        <p>No bugs to exterminate good job!</p>
+                    </div>
+                }
             </Container>
         );
     }

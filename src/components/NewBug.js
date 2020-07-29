@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Form, Col, Row, Button, Alert } from "react-bootstrap"
+import { Container, Form, Col, Row, Button, Alert, Badge } from "react-bootstrap"
+import SevBadge from "./SeverityBadge"
 
 class NewBug extends Component {
     constructor(props) {
@@ -44,10 +45,10 @@ class NewBug extends Component {
 
     getLocalStorage = () => {
         const bugs = JSON.parse(localStorage.getItem("bugs"))
-        if(!bugs){
+        if (!bugs) {
             localStorage.setItem("bugs", JSON.stringify(this.state.bugArr))
-        }else{
-            this.setState({bugArr: bugs})
+        } else {
+            this.setState({ bugArr: bugs })
         }
     }
 
@@ -80,7 +81,9 @@ class NewBug extends Component {
                         </Row>
 
                         <Form.Group controlId="formRange">
-                            <Form.Label>Severity</Form.Label>
+                            <Form.Label>
+                                Severity: <SevBadge severity={this.state.severity} />
+                            </Form.Label>
                             <Form.Control
                                 onChange={this.handleChange}
                                 name="severity"
@@ -92,7 +95,7 @@ class NewBug extends Component {
                             <Form.Label>Description</Form.Label>
                             <Form.Control
                                 onChange={this.handleChange}
-                                name="desc" 
+                                name="desc"
                                 as="textarea"
                                 rows="4"
                                 placeholder="Describe the bug..."
@@ -103,7 +106,7 @@ class NewBug extends Component {
                             <Form.Label>Expected Output</Form.Label>
                             <Form.Control
                                 onChange={this.handleChange}
-                                name="expected" 
+                                name="expected"
                                 type="text"
                                 placeholder="What was supposed to happen?"
                             />
