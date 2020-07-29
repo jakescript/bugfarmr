@@ -5,6 +5,7 @@ import Home from "./components/Home"
 import NewBug from "./components/NewBug"
 import MainNav from "./components/Nav"
 import Footer from "./components/Footer"
+import NotFound from "./components/NotFound"
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/new" component={NewBug} />
+          <Route component={NotFound} /> 
         </Switch>
         <Footer />
       </BrowserRouter>
