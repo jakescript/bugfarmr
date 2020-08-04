@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <MainNav />
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route path="/" component={Home} />
           <Route exact path="/new" component={NewBug} />
           <Route component={NotFound} /> 
         </Switch>
