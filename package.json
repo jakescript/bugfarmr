@@ -2,7 +2,7 @@
   "name": "bugfarmr",
   "version": "1.0.0",
   "author": "jake goldstein",
-  "homepage": "https://jakescript.github.io/bugfarmr",
+  "homepage": "https://jakescript.github.io/Bugfarmr",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
