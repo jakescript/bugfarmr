@@ -36,7 +36,7 @@ class NewBug extends Component {
             env: this.state.env,
             desc: this.state.desc,
             severity: this.state.severity,
-            expected: this.state.expected,
+            expected: this.state.expected
         }
         this.state.bugArr.push(bug)
         const bugStr = JSON.stringify(this.state.bugArr)

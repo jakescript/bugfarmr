@@ -21,7 +21,7 @@ const topTitles = {
 }
 
 function Bug(props) {
-    const { title, env, desc, expected, severity } = props.item
+    const { title, env, desc, expected, severity, solved } = props.item
     
     return (
         <Card border="primary" text="dark"  style={cardStyle}>
@@ -58,9 +58,7 @@ function deleteBug(title, update) {
             bugs.splice(i, 1)
         }
     }
-
     localStorage.setItem("bugs", JSON.stringify(bugs))
     update()
 }
-
 export default Bug
